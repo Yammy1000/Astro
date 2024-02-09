@@ -99,7 +99,7 @@ settings = {
         "token": None,
         "permissions": [],
         "bot_permission": "2146958847",
-        "command_prefix": "an.",
+        "command_prefix": "~.",
         "bot_status": "online",
         "verbose": 15,
         "bomb_messages": {
