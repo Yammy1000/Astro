@@ -80,12 +80,14 @@ def exit():
 def banner():
     """Handler for non-unicode consoles"""
     sys.stdout.buffer.write(f'''\
- ██████╗                  ██████╗ ███████╗ █████╗ ██╗     
-██╔════╝                  ██╔══██╗██╔════╝██╔══██╗██║   Version: {__VERSION__}
-██║         █████╗        ██████╔╝█████╗  ███████║██║     Made by:
-██║         ╚════╝        ██╔══██╗██╔══╝  ██╔══██║██║       TKperson
-╚██████╗                  ██║  ██║███████╗██║  ██║███████╗    and
- ╚═════╝                  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝      cyxl
+ ________  ________  _________  ________  ________     
+|\   __  \|\   ____\|\___   ___\\   __  \|\   __  \    
+\ \  \|\  \ \  \___|\|___ \  \_\ \  \|\  \ \  \|\  \    Version: {__VERSION__}
+ \ \   __  \ \_____  \   \ \  \ \ \   _  _\ \  \\\  \     
+  \ \  \ \  \|____|\  \   \ \  \ \ \  \\  \\ \  \\\  \ 
+   \ \__\ \__\____\_\  \   \ \__\ \ \__\\ _\\ \_______\
+    \|__|\|__|\_________\   \|__|  \|__|\|__|\|_______|
+             \|_________|
 '''.encode('utf8'))
 
 # Check for > 1.5.1 discord version
@@ -97,15 +99,15 @@ settings = {
         "token": None,
         "permissions": [],
         "bot_permission": "2146958847",
-        "command_prefix": ".",
-        "bot_status": "offline",
+        "command_prefix": "an.",
+        "bot_status": "online",
         "verbose": 15,
         "bomb_messages": {
             "random": 10,
              "fixed": ["nuked"]
          },
         "webhook_spam": {
-            "usernames": ["nuked"],
+            "usernames": ["ASTRONUKERS"],
             "pfp_urls": [None],
             "contents": ["@everyone"]
         },
