@@ -3,13 +3,12 @@
 """
 MIT License
 
-Copyright (c) 2020 - 2023
+Copyright (c) 2024 - 2027
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
+to use copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
@@ -48,9 +47,9 @@ from colorama import init, Fore
 init(autoreset=True)
 
 # 
-__TITLE__ = "C-REAL"
+__TITLE__ = "Astro"
 __VERSION__ = "2.4.1"
-__AUTHOR__ = "TKperson"
+__AUTHOR__ = "Yammy"
 __LICENSE__ = "MIT"
 
 # Global vars
@@ -308,6 +307,14 @@ async def on_connect():
 async def on_ready():
     banner()
     print('/+========================================================')
+    print(f'________  ________  _________  ________      
+|\   __  \|\   ____\|\___   ___\\   __  \|\   __  \    
+\ \  \|\  \ \  \___|\|___ \  \_\ \  \|\  \ \  \|\  \    
+ \ \   __  \ \_____  \   \ \  \ \ \   _  _\ \  \\\  \     
+  \ \  \ \  \|____|\  \   \ \  \ \ \  \\  \\ \  \\\  \ 
+   \ \__\ \__\____\_\  \   \ \__\ \ \__\\ _\\ \_______\
+    \|__|\|__|\_________\   \|__|  \|__|\|__|\|_______|
+             \|_________|')
     print(f'| | {Fore.GREEN}Bot ready.')
     print(f'| {Fore.MAGENTA}+ Logged in as')
     print(f'| | {client.user.name}#{client.user.discriminator}')
