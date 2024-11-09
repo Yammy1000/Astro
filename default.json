@@ -1,0 +1,32 @@
+{
+    "token": "MTI5MTIxNzY3Mzc5NTAxMDU4Mg.Gidu8i.E3i0QjnDUdM9l86JgSqAYo8JxNdfMF02_-RbKY",
+    "permissions": [
+        "8589934591"
+    ],
+    "bomb_messages": {
+        "random": "",
+        "fixed": [
+            "NUKED BY ASTRO"
+        ]
+    },
+    "webhook_spam": {
+        "usernames": [
+            "BILLY"
+        ],
+        "pfp_urls": [],
+        "contents": [
+            "HEHE"
+        ],
+        "bot_permission": "8589934591"
+    },
+    "command_prefix": "~.",
+    "bot_status": "online",
+    "verbose": 15,
+    "after": [
+        ""
+    ],
+    "proxies": [],
+    "ban_whitelist": [
+        "1276643995237482678"
+    ]
+}
