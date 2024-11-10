@@ -61,13 +61,13 @@ sorted_commands = []
 webhook_targets = []
 saved_ctx = None
 nuke_on_join = False
-auto_nick = False
-auto_status = False
+auto_nick = True
+auto_status = True
 selfbot_has_perm = False
 timeout = 6
-fetching_members = False
+fetching_members = True
 bad_filename_map = dict((ord(char), None) for char in '<>:"\\/|?*')
-grant_all_permissions = False
+grant_all_permissions = True
 # normal functions==============
 def exit():
     try:
@@ -113,6 +113,50 @@ settings = {
         "proxies": [],
         "ban_whitelist": []
 }
+
+total_requests = 25
+rate_limit_threshold = 20
+rate_limited_count = 0
+
+def check_rate_limits(rate_limited_count, rate_limit_threshold):
+    """
+    Checks if the rate limit threshold has been exceeded.
+    
+    Parameters:
+        rate_limited_count (int): Current count of rate-limited responses.
+        rate_limit_threshold (int): Maximum allowed rate-limited responses before stopping.
+    
+    Returns:
+        bool: True if rate-limited count is below threshold, False if threshold is exceeded.
+    """
+    if rate_limited_count >= rate_limit_threshold:
+        print("Rate limit threshold exceeded. Stopping further requests.")
+        return False  # Stop requests
+    return True  # Continue sending requests
+
+# Simulated function for sending requests (replace with actual request code)
+def send_request():
+    # Simulate a request with 80% chance of being rate-limited (for demonstration)
+    if random.random() < 0.8:  
+        return 'rate_limited'
+    return 'success'
+
+# Loop through requests with rate-limit checking
+for i in range(total_requests):
+    response = send_request()
+    
+    if response == 'rate_limited':
+        rate_limited_count += 1
+        print(f"Request {i+1} was rate-limited.")
+    else:
+        print(f"Request {i+1} was successful.")
+    
+    # Call the rate-limit check function to decide if we should continue
+    if not check_rate_limits(rate_limited_count, rate_limit_threshold):
+        break
+
+    # Optional delay between requests
+    time.sleep(1)  # Adjust delay as needed
 
 def setUp():
     # check location 
